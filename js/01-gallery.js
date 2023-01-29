@@ -26,6 +26,9 @@ gallery.innerHTML = items;
 gallery.addEventListener("click", onHandleClick);
 
 function onHandleClick(evt) {
+  if (evt.target.nodeName !== `IMG`) {
+    return;
+  }
   evt.preventDefault();
 
   basicLightbox
